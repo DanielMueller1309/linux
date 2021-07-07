@@ -3,7 +3,7 @@
 #### Reloading tmux config
 If you have made changes to your tmux configuration file in the ~/.tmux.conf file, it shouldn’t be necessary to start the server up again from scratch with kill-server. Instead, you can prompt the current tmux session to reload the configuration with the source-file command.
 
-This can be done either from within tmux, by pressing Ctrl+B and then : to bring up a command prompt, and typing:
+This can be done either from within tmux, by pressing Ctrl+A+R and then : to bring up a command prompt, and typing:
 
 > :source-file ~/.tmux.conf
 
@@ -12,9 +12,6 @@ Or simply from a shell:
 > $ tmux source-file ~/.tmux.conf
 
 This should apply your changes to the running tmux server without affecting the sessions or windows within them.
-
-
-
 
 #### Autostart Tmux Session On Remote System When Logging In Via SSH
 To autostart Tmux session when connecting via SSH, edit your remote system's ~/.bash_profile file:
@@ -56,7 +53,7 @@ keybind + q : zeigt nummern der panes an
 
 When you do a `CTRL+c`, the stuff you copy is stored in your computer's buffer, called ‘clipboard’ from where you can paste anywhere by doing a `CTRL+v`. Tmux has it's own buffer for coppying, which we'll call ‘tmux buffer’. Our goal is to understand in a Tmux session how to copy to tmux buffer, and also to clipboard.
 
-You can always copy stuff into clipboard while usin Tmux. “Why do I need a Tmux buffer then”, you might wonder. This is because, in your shell, the text you want to select might not fit in your current screen (e.g. output of cat /etc/passwd file). If you copy normally, you will only be able to copy text visible on your screen, and not the output which is ‘scrolled up’ due to a lot of output.
+You can always copy stuff into clipboard while using Tmux. “Why do I need a Tmux buffer then”, you might wonder. This is because, in your shell, the text you want to select might not fit in your current screen (e.g. output of cat /etc/passwd file). If you copy normally, you will only be able to copy text visible on your screen, and not the output which is ‘scrolled up’ due to a lot of output.
 
 #### Tmux copy-paste - the defaults
 The defaults are slighly involved, so this section is purely for informational purposes, and shouldn't be memorized. Skipping this section is perfectly okay.
